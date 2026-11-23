@@ -247,6 +247,7 @@ public class EntitySelectorScreen extends Screen {
         try {
             Entity entity = type.create(this.minecraft.level, net.minecraft.world.entity.EntitySpawnReason.COMMAND);
             if (entity instanceof LivingEntity living) {
+                living.setId(-1);
                 if (this.minecraft.player != null) {
                     double px = this.minecraft.player.getX();
                     double py = this.minecraft.player.getY();
@@ -820,7 +821,13 @@ public class EntitySelectorScreen extends Screen {
                     (EntityRenderer<? super LivingEntity, EntityRenderState>) dispatcher.getRenderer(this.previewEntity);
             EntityRenderState state = renderer.createRenderState(this.previewEntity, 1.0F);
             state.lightCoords = 15728880;
-            state.shadowPieces.clear();
+            state.shadowRadius = 0.0F;
+            if (state.shadowPieces != null) {
+                try {
+                    state.shadowPieces.clear();
+                } catch (UnsupportedOperationException ignored) {
+                }
+            }
             state.outlineColor = 0;
             if (state instanceof LivingEntityRenderState livingState) {
                 livingState.bodyRot = bodyYaw;
