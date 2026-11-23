@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.velorise.cameralockon.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "camera_lockon.refmap.json",
+  "client": [
+    "CameraPositionMixin",
+    "EntityOutlineMixin",
+    "GameRendererMixin",
+    "KeyboardHandlerMixin",
+    "MouseHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

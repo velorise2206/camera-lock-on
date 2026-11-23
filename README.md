@@ -114,3 +114,15 @@ Detailed release notes and historical changes are available in [`CHANGELOG.md`](
 ## 📄 License
 
 Camera Lock-On is distributed under **All Rights Reserved**. See [LICENSE](LICENSE) for full licensing terms.
+
+## Multi-Loader Architecture & Supported Versions (`v2.0.3` — 17 Ports)
+
+| Branch | Minecraft | Loaders | Java | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| `1.20.1/` | **1.20.1** | Forge (`47.4.10+`) • Fabric (`0.16.14+`) | Java 17 | Shared `1.20.1/common/` |
+| `1.21.1/` | **1.21.1** | Forge (`52.1.20+`) • NeoForge (`21.1.65+`) • Fabric (`0.16.14+`) | Java 21 | Shared `1.21.1/common/` |
+| `1.21.11/` | **1.21.11** | Forge (`61.2.4+`) • NeoForge (`21.11.45+`) • Fabric (`0.17.3+`) | Java 21 | Shared `1.21.11/common/` (FG7 needs JDK 8) |
+| `26.1/` | **26.1.2** (`26.1`–`26.1.2`) | Forge (`64.1.6+`) • NeoForge (`26.1.2.112+`) • Fabric (`0.19.2+`) | Java 25 | Shared `26.1/common/` (FG7 needs JDK 8) |
+| `26.2/` | **26.2** | Forge (`65.1.6+`) • NeoForge (`26.2.0.93+`) • Fabric (`0.19.3+`) | Java 25 | Shared `26.2/common/` (FG7 needs JDK 8) |
+| `26.3/` | **26.3** | Forge (`66.1.9+`) • NeoForge (`26.3.0.102+`) • Fabric (`0.19.5+`) | Java 25 | Shared `26.3/common/` (FG7 needs JDK 8) |
+

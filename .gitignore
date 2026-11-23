@@ -17,3 +17,4 @@ run/
 *.log
 *.class
 mods/
+release-jars/

@@ -4,8 +4,12 @@ All notable changes to **Camera Lock-On** are documented in this file.
 
 ---
 
-## [2.0.3] — Target Outline, Occluded Steering & Safe Server Dialog
+## [2.0.3] — Multi-Loader `common/` Refactor, 17 Ports & Target Outline
 
+- **Multi-Loader `common/` Architecture:** Extracted all 38 shared gameplay, targeting, projectile assist, HUD, preset, and config screen classes per version into `<version>/common/` with a thin per-loader `PlatformBridge` and unified JSON `CameraLockOnConfig`.
+- **Full 17-Port Coverage:** Expanded support across **Forge**, **NeoForge**, and **Fabric** (Quilt-compatible) for `1.20.1`, `1.21.1`, `1.21.11`, `26.1.2`, `26.2`, and `26.3`.
+- **Minecraft `26.x` Client API Updates:** Migrated screens and HUD to `GuiGraphicsExtractor`, `extractRenderState`, `extractBackground`, `sendOverlayMessage`, Fabric `KeyMappingHelper`/`HudElementRegistry`, and ForgeGradle 7 (`7.0.40`) + EventBus 7.
+- **CI & Tooling:** Added `.github/workflows/build-ports.yml` (17 jobs with Zulu JDK 8 for FG7), `build-all.ps1`, and unified `run.bat`.
 - Added client-side Target Outline via `EntityOutlineMixin` for glowing silhouettes matching the configured Reticle Color without network desync or damage-flicker.
 - Added Ender Dragon multipart entity support for Target Outline.
 - Added port for **Fabric 1.20.1** (Java 17).
